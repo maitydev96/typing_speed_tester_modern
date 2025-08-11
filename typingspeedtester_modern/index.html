@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Typing Speed Tester — Modern</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+      <header>
+        <h1>Typing Speed Tester</h1>
+        <p class="subtitle">Modern, responsive tester — live WPM, accuracy & highlighting</p>
+      </header>
+
+      <section class="controls">
+        <div class="left">
+          <label for="mode">Mode</label>
+          <select id="mode">
+            <option value="time">60 sec</option>
+            <option value="words">Type full text</option>
+          </select>
+        </div>
+
+        <div class="center">
+          <button id="startBtn" class="btn primary">Start</button>
+          <button id="restartBtn" class="btn">Restart</button>
+        </div>
+
+        <div class="right">
+          <label for="sampleSelect">Sample</label>
+          <select id="sampleSelect"></select>
+        </div>
+      </section>
+
+      <section class="display">
+        <div id="textDisplay" class="text-display" aria-live="polite"></div>
+        <textarea id="inputArea" class="input-area" placeholder="Start typing here..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+      </section>
+
+      <section class="stats">
+        <div class="stat">
+          <div class="label">Time</div>
+          <div id="time" class="value">60s</div>
+        </div>
+        <div class="stat">
+          <div class="label">WPM</div>
+          <div id="wpm" class="value">0</div>
+        </div>
+        <div class="stat">
+          <div class="label">Accuracy</div>
+          <div id="accuracy" class="value">100%</div>
+        </div>
+        <div class="stat">
+          <div class="label">Best</div>
+          <div id="best" class="value">—</div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <small>Made with ♥ — Modern UI, highlights incorrect letters in red, correct in green.</small>
+      </footer>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
